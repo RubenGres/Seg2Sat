@@ -1,14 +1,12 @@
 SatelliteDreams
 ======
 
-This project aims to generate fake satellite images from image segmentation using StableDiffusion, ControlNet and the [OCSGE dataset](https://ignf.github.io/FLAIR/).
+This project aims to generate fake aerial images from image segmentation using StableDiffusion, ControlNet and the [FLAIR (French Land cover from Aerospace ImageRy)  dataset](https://ignf.github.io/FLAIR/).
 
-The final goal is to get something like this:
-
-Image Segmentation         |  Generated Output
-:-------------------------:|:-------------------------:
-![](images/msk_ex.png)     |  ![](images/img_ex.png)
+Ground Truth               |  Image Segmentation      |  Generated Image
+:-------------------------:|:------------------------:|:-------------------------:
+![](images/img_ex.png)     |  ![](images/msk_ex.png)  |  TODO
 
 ## Limitations
 
-The OCS GE dataset covers France only, this will introduce a biais in the learned terrain representation.
+The dataset covers France only, this will introduce a biais in the learned terrain representation.
