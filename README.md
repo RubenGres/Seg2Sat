@@ -1,4 +1,4 @@
-SatelliteDreams
+AerialDreams
 ======
 
 This project aims to generate fake aerial images from image segmentation using StableDiffusion, ControlNet and the [FLAIR (French Land cover from Aerospace ImageRy)  dataset](https://ignf.github.io/FLAIR/).
