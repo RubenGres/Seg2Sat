@@ -1,32 +1,48 @@
 AerialDreams
 ======
 
-This project aims to generate fake aerial images from image segmentation using [StableDiffusion](https://github.com/CompVis/stable-diffusion), [ControlNet](https://github.com/lllyasviel/ControlNet) and IGN's [FLAIR (French Land cover from Aerospace ImageRy)  dataset](https://ignf.github.io/FLAIR/).
+## Description
+
+AerialDreams is a project that explores the potential of utilizing algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on image segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real aerial imagery.
 
 Ground Truth               |  Image Segmentation      |  Generated Image
 :-------------------------:|:------------------------:|:-------------------------:
 ![](images/img_ex.png)     |  ![](images/msk_ex.png)  |  **TODO**
+
+
+<br>
 
 <!---
 ## How to use
 
 You can play with the model on the dedicated HuggingFace space or run it locally.
 
-
-## About the dataset
-
-I had create a new dataset from FLAIR to be useable with stable diffusion. I first converted all .TIF images to .PNG to have a more manageable file format with StableDiffusion. A LUT from the dataset documentation has also been applied to the image segmentation.  
-
-Location information and description was gathered from the TIF files and from the OpenStreetMap API. From this a label was created for each image.
-
-The entire dataset (> 61k images) can be found on HuggingFace.
-
 ## Download the model
 
-The trained model is now available on HuggingFace or Civit.ai
+The trained model is available on HuggingFace
 
 --->
 
+## About the dataset
+
+To facilitate the use of StableDiffusion, a custom dataset has been derived from the FLAIR dataset. The TIFF images have been converted to PNG format for convenience, and the image segmentation process incorporates the recommended Look-Up Table (LUT) from the dataset documentation. Location data and descriptions have been gathered from the TIF files and the OpenStreetMap API to enrich the dataset, enabling the creation of meaningful labels for each image.
+
+The complete dataset, consisting of over 61,000 images, can be accessed on HuggingFace [here](https://huggingface.co/datasets/rgres/AerialDreams).
+
+<br>
+
+## File Structure
+
+The project consists of the following files and directories:
+
+- validation/: A directory containing validation data and prompts.
+- get_classes_percentages.py: A Python script for calculating the percentages of different classes for each segmentation image.
+- get_image_segmentation.py: A Python script to convert TIFF image segmentation to PNG format.
+- get_metadata.py: A Python script for extracting metadata from the FLAIR dataset and OpenStreetMap API.
+- prep_data.ipynb: A Jupyter Notebook for preprocessing the data, all the above functions are called in this file.
+
+<br>
+
 ## Limitations
 
-This dataset covers France only, this will introduce a biais in the learned representation and it the model might struggle to render other types of terrain.
+One limitation of this project is that the FLAIR dataset covers France only. As a result, the learned representation and generated images may be biased towards French terrain. The model might struggle to accurately render other types of terrain outside of France. Future improvements could involve expanding the dataset to include a more diverse range of regions and landscapes.
