@@ -193,10 +193,8 @@ The complete dataset, consisting of over 61,000 images, can be accessed on Huggi
 
 The project consists of the following files and directories:
 
-- `validation/`: A directory containing validation data and prompts.
-- `scripts/get_classes_percentages.py`: A Python script for calculating the percentages of different classes for each segmentation image.
-- `scripts/get_image_segmentation.py`: A Python script to convert TIFF image segmentation to PNG format.
-- `scripts/get_metadata.py`: A Python script for extracting metadata from the FLAIR dataset and OpenStreetMap API.
+- `validation/`: A directory containing validation images, masks and prompts.
+- `scripts/`: A directory containing utility scripts to convert and enrich the FLAIR dataset for this project.
 
 <br>
 
