@@ -202,4 +202,4 @@ The project consists of the following files and directories:
 
 One limitation of this project is that the FLAIR dataset covers France only. As a result, the learned representation and generated images may be biased towards French terrain. The model might struggle to accurately render other types of terrain outside of France. Future improvements could involve expanding the dataset to include a more diverse range of regions and landscapes.  
 
-Also theses results are obtained using a ControlNet on the base StableDiffusion 2.1 model. More details could be obtained in the counterfeit by fine tuning a model on aerial imaging.
+Also theses results are obtained using a ControlNet on the base StableDiffusion 2.1 model. More details could be obtained in the generated images by finetuning a diffusion model on aerial imaging.
