@@ -162,9 +162,19 @@ Ground Truth               |  Image Segmentation      |  Generated Image
          </tr>
       </tbody>
    </table>
-</details>
+</details>  
 
-Since this is derived from a text-to-image model it is also possible to guide the generation further by modifying the prompt.
+<br>
+
+## Image stylization with prompt engineering
+
+Since this is derived from a general text-to-image model it is also possible to guide the generation further by modifying the prompt.  
+
+The following images were generated using the prompt `<style>, aerial view of 31 Rue Molière, France` :
+
+  Colorful lego brick      |  Detailed pencil sketch | Oil on canvas painting
+:-------------------------:|:-------------------------:|:-------------------------:|
+![](images/styles/lego2.png)  |  ![](images/styles/pencil.png) | ![](images/styles/oil.png)
 
 ## How to use
 
