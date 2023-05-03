@@ -164,25 +164,40 @@ Ground Truth               |  Image Segmentation      |  Generated Image
    </table>
 </details>
 
-<br>
-
 Since this is derived from a text-to-image model it is also possible to guide the generation further by modifying the prompt.
-
-<!---
 
 ## How to use
 
-You can play with the model on the dedicated HuggingFace space or run it locally. (soon-ish) 
+You can use the model with the diffusers library :
 
-<br>
+```python
 
---->
+from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
+from diffusers import StableDiffusionControlNetPipeline
+from diffusers.utils import load_image
+import torch
+
+controlnet = ControlNetModel.from_pretrained("rgres/sd-controlnet-aerialdreams", torch_dtype=torch.float16)
+
+pipe = StableDiffusionControlNetPipeline.from_pretrained(
+    "stabilityai/stable-diffusion-2-1-base", controlnet=controlnet, torch_dtype=torch.float16
+)
+
+image = load_image("https://raw.githubusercontent.com/RubenGres/AerialDreams/main/validation/mask/MSK_076201.png")
+
+image = pipe(
+   prompt="High resolution image, 4K, ultra detailed, aerial view of 31 Rue Molière, France.", num_inference_steps=20, image=image
+).images[0]
+
+image.show()
+     
+```
+
+<a href="https://colab.research.google.com/github/RubenGres/AerialDreams/blob/main/aerialdreams_inference.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## Download the model
 
 The trained weights are available on HuggingFace [here](https://huggingface.co/rgres/sd-controlnet-aerialdreams)
-
-<br>
 
 ## About the dataset
 
@@ -193,16 +208,12 @@ Each label is in the form `Aerial view of <OSM display_name>. <classes>`
 
 The complete dataset, consisting of over 61,000 images, can be accessed on HuggingFace [here](https://huggingface.co/datasets/rgres/AerialDreams).
 
-<br>
-
 ## File Structure
 
 The project consists of the following files and directories:
 
 - `validation/`: A directory containing validation images, masks and prompts.
 - `scripts/`: A directory containing utility scripts to convert and enrich the FLAIR dataset for this project.
-
-<br>
 
 ## Limitations
 
