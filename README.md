@@ -3,14 +3,16 @@ AerialDreams
 
 ## Description
 
-AerialDreams is a project that explores the potential of utilizing algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on image segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real aerial imagery.
+AerialDreams is a project that explores the potential of utilizing algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on image segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real aerial imagery.  
+
+The following images have been generated with the trained ControlNet model using image label as prompt:
 
 Ground Truth               |  Image Segmentation      |  Generated Image
 :-------------------------:|:------------------------:|:-------------------------:
-![](validation/image/IMG_076201.png)     |  ![](validation/mask/MSK_076201.png)  |  ![](images/FAKE_076201_0.png)
-![](validation/image/IMG_067998.png)     |  ![](validation/mask/MSK_067998.png)  |  ![](images/FAKE_067998_0.png)
-![](validation/image/IMG_073879.png)     |  ![](validation/mask/MSK_073879.png)  |  ![](images/FAKE_073879_0.png)
-![](validation/image/IMG_074756.png)     |  ![](validation/mask/MSK_074756.png)  |  ![](images/FAKE_074756_0.png)
+![](validation/image/IMG_076201.png)     |  ![](validation/mask/MSK_076201.png)  |  ![](images/076201/1.png)
+![](validation/image/IMG_067998.png)     |  ![](validation/mask/MSK_067998.png)  |  ![](images/067998/2.png)
+![](validation/image/IMG_073879.png)     |  ![](validation/mask/MSK_073879.png)  |  ![](images/073879/0.png)
+![](validation/image/IMG_074756.png)     |  ![](validation/mask/MSK_074756.png)  |  ![](images/074756/0.png)
 
 <details>
    <summary>Legend</summary>
@@ -162,15 +164,19 @@ Ground Truth               |  Image Segmentation      |  Generated Image
    </table>
 </details>
 
+<br>
+
+Since this is derived from a text-to-image model it is also possible to guide the generation further by modifying the prompt.
+
+<!---
+
+## How to use
+
+You can play with the model on the dedicated HuggingFace space or run it locally. (soon-ish) 
 
 <br>
 
-<!---
-## How to use
-
-You can play with the model on the dedicated HuggingFace space or run it locally.
-
--->
+--->
 
 ## Download the model
 
