@@ -180,7 +180,7 @@ You can play with the model on the dedicated HuggingFace space or run it locally
 
 ## Download the model
 
-The trained weights will soon be available on HuggingFace
+The trained weights are available on HuggingFace [here](https://huggingface.co/rgres/sd-controlnet-aerialdreams)
 
 <br>
 
