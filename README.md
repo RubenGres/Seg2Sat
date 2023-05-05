@@ -7,12 +7,11 @@ AerialDreams is a project that explores the potential of utilizing algorithms su
 
 The following images have been generated with the trained ControlNet model using image label as prompt:
 
-Ground Truth               |  Image Segmentation      |  Generated Image
-:-------------------------:|:------------------------:|:-------------------------:
-![](validation/image/IMG_076201.png)     |  ![](validation/mask/MSK_076201.png)  |  ![](images/076201/1.png)
-![](validation/image/IMG_067998.png)     |  ![](validation/mask/MSK_067998.png)  |  ![](images/067998/2.png)
-![](validation/image/IMG_073879.png)     |  ![](validation/mask/MSK_073879.png)  |  ![](images/073879/0.png)
-![](validation/image/IMG_074756.png)     |  ![](validation/mask/MSK_074756.png)  |  ![](images/074756/0.png)
+Image Segmentation                   |  Generated Image           |  Generated Image
+:-----------------------------------:|:--------------------------:|:-------------------------:
+![](images/drawn_1/mask.png)         |  ![](images/drawn_1/0.png) | ![](images/drawn_1/1.png)
+![](validation/mask/MSK_067998.png)  |  ![](images/067998/2.png)  | ![](images/067998/4.png)
+![](validation/mask/MSK_076201.png)  |  ![](images/076201/1.png)  | ![](images/076201/2.png)
 
 <details>
    <summary>Legend from the FLAIR dataset documentation</summary>
