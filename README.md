@@ -9,9 +9,9 @@ The following images have been generated with the trained ControlNet model using
 
 Image Segmentation                   |  Generated Image           |  Generated Image
 :-----------------------------------:|:--------------------------:|:-------------------------:
-![](images/drawn_1/mask.png)         |  ![](images/drawn_1/0.png) | ![](images/drawn_1/1.png)
-![](validation/mask/MSK_067998.png)  |  ![](images/067998/2.png)  | ![](images/067998/4.png)
-![](validation/mask/MSK_076201.png)  |  ![](images/076201/1.png)  | ![](images/076201/2.png)
+![](images/drawn_1/mask.png)       |  ![](images/drawn_1/0.png) | ![](images/drawn_1/1.png)
+![](images/067998/MSK_067998.png)  |  ![](images/067998/2.png)  | ![](images/067998/4.png)
+![](images/076201/MSK_076201.png)  |  ![](images/076201/1.png)  | ![](images/076201/2.png)
 
 <details>
    <summary>Legend from the FLAIR dataset documentation</summary>
@@ -219,10 +219,13 @@ The complete dataset, consisting of over 61,000 images, can be accessed on Huggi
 
 ## File Structure
 
-The project consists of the following files and directories:
+This github repo consists of the following directories:
 
-- `validation/`: A directory containing validation images, masks and prompts.
-- `scripts/`: A directory containing utility scripts to convert and enrich the FLAIR dataset for this project.
+- `controlnet_training/`: Contains everything needed to train the ControlNet model with validation images.
+- `dataset_preparation/`: Contains the code used to convert the FLAIR#1 dataset.
+- `scripts/`: Contains a simple example on how to use this project, with the diffuser API or a simple gradio interface.
+- `ui/`: Contains the code for the complete interface allowing you to draw from your browser
+- `images/`: All images used in the REAMDE.md file
 
 ## Limitations
 

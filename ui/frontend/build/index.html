@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/static/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.contentWindow.min.js"></script>
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/static/_app/immutable/assets/pages/__layout.svelte-dcfcba4b.css">
+	<link rel="stylesheet" href="/static/_app/immutable/assets/pages/index.svelte-65a37285.css">
+	<link rel="modulepreload" href="/static/_app/immutable/start-a60c2789.js">
+	<link rel="modulepreload" href="/static/_app/immutable/chunks/index-bcf2726a.js">
+	<link rel="modulepreload" href="/static/_app/immutable/chunks/paths-d3bcbd10.js">
+	<link rel="modulepreload" href="/static/_app/immutable/pages/__layout.svelte-0c386344.js">
+	<link rel="modulepreload" href="/static/_app/immutable/pages/index.svelte-6350336a.js">
+	</head>
+	<body class="light:bg-white bg-[rgb(11,15,25)] light:text-black text-white">
+		
+
+
+<div class="max-w-screen-md mx-auto px-3 py-5 relative z-0"><article class="prose dark:prose-invert"><h1>Drawing to Map</h1></article>
+	<form><h4 class="font-bold mt-6 mb-2 leading-6 my-3">Brush Type</h4>
+	<div class="colors svelte-1oy4poo" name="colors"><div class="snap-always snap-start"><input name="color"  type="radio" id="color-0" value="0" class="svelte-1oy4poo">
+				<label for="color-0" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(219,14,154)"></rect></svg>
+					<span class="svelte-1oy4poo">building</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-1" value="1" class="svelte-1oy4poo">
+				<label for="color-1" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(147,142,123)"></rect></svg>
+					<span class="svelte-1oy4poo">pervious surface</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-2" value="2" class="svelte-1oy4poo">
+				<label for="color-2" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(248,12,0)"></rect></svg>
+					<span class="svelte-1oy4poo">impervious surface</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-3" value="3" class="svelte-1oy4poo">
+				<label for="color-3" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(169,113,1)"></rect></svg>
+					<span class="svelte-1oy4poo">bare soil</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-4" value="4" class="svelte-1oy4poo">
+				<label for="color-4" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(21,83,174)"></rect></svg>
+					<span class="svelte-1oy4poo">water</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-5" value="5" class="svelte-1oy4poo">
+				<label for="color-5" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(25,74,38)"></rect></svg>
+					<span class="svelte-1oy4poo">coniferous</span></label>
+			</div><div class="snap-always snap-start"><input name="color" checked type="radio" id="color-6" value="6" class="svelte-1oy4poo">
+				<label for="color-6" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(70,228,131)"></rect></svg>
+					<span class="svelte-1oy4poo">deciduous</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-7" value="7" class="svelte-1oy4poo">
+				<label for="color-7" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(243,166,13)"></rect></svg>
+					<span class="svelte-1oy4poo">brushwood</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-8" value="8" class="svelte-1oy4poo">
+				<label for="color-8" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(102,0,130)"></rect></svg>
+					<span class="svelte-1oy4poo">vineyard</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-9" value="9" class="svelte-1oy4poo">
+				<label for="color-9" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(85,255,0)"></rect></svg>
+					<span class="svelte-1oy4poo">herbaceous vegetation</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-10" value="10" class="svelte-1oy4poo">
+				<label for="color-10" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(255,243,13)"></rect></svg>
+					<span class="svelte-1oy4poo">agricultural land</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-11" value="11" class="svelte-1oy4poo">
+				<label for="color-11" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(228,223,124)"></rect></svg>
+					<span class="svelte-1oy4poo">plowed land</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-12" value="12" class="svelte-1oy4poo">
+				<label for="color-12" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(61,230,235)"></rect></svg>
+					<span class="svelte-1oy4poo">swimming pool</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-13" value="13" class="svelte-1oy4poo">
+				<label for="color-13" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(255,255,255)"></rect></svg>
+					<span class="svelte-1oy4poo">snow</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-14" value="14" class="svelte-1oy4poo">
+				<label for="color-14" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(138,179,160)"></rect></svg>
+					<span class="svelte-1oy4poo">clear cut</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-15" value="15" class="svelte-1oy4poo">
+				<label for="color-15" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(107,113,79)"></rect></svg>
+					<span class="svelte-1oy4poo">mixed</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-16" value="16" class="svelte-1oy4poo">
+				<label for="color-16" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(197,220,66)"></rect></svg>
+					<span class="svelte-1oy4poo">ligneous</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-17" value="17" class="svelte-1oy4poo">
+				<label for="color-17" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(153,153,255)"></rect></svg>
+					<span class="svelte-1oy4poo">greenhouse</span></label>
+			</div><div class="snap-always snap-start"><input name="color"  type="radio" id="color-18" value="18" class="svelte-1oy4poo">
+				<label for="color-18" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(0,0,0)"></rect></svg>
+					<span class="svelte-1oy4poo">other</span></label>
+			</div></div>
+	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Brush Size</h4>
+	<div class="brush svelte-1oy4poo"><input value="10" min="1" max="150" step="1" name="brush" type="range">
+		<label class="pl-2 svelte-1oy4poo" for="brush">40</label></div>
+</form>
+	<div class="drawings py-3 -mx-3 svelte-237ry5"><div><div class="relative overflow-clip"><canvas class="canvas svelte-pr47cz" width="512" height="512"></canvas>
+		<canvas class="brush svelte-pr47cz" width="10" height="10"></canvas>
+		<span class="label svelte-pr47cz">deciduous</span>
+		<button class="absolute bottom-0 left-0 p-3" disabled><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 512 512" class=""><path fill="white" stroke="black" stroke-width="30" d="M480 256c0 123.4-100.5 223.9-223.9 223.9c-48.84 0-95.17-15.58-134.2-44.86c-14.12-10.59-16.97-30.66-6.375-44.81c10.59-14.12 30.62-16.94 44.81-6.375c27.84 20.91 61 31.94 95.88 31.94C344.3 415.8 416 344.1 416 256s-71.69-159.8-159.8-159.8c-37.46 0-73.09 13.49-101.3 36.64l45.12 45.14c17.01 17.02 4.955 46.1-19.1 46.1H35.17C24.58 224.1 16 215.5 16 204.9V59.04c0-24.04 29.07-36.08 46.07-19.07l47.6 47.63C149.9 52.71 201.5 32.11 256.1 32.11C379.5 32.11 480 132.6 480 256z"></path></svg></button></div>
+</div>
+		<div class="relative overflow-clip flex flex-col justify-center items-center w-full h-full">
+	</div>
+
+</div>
+
+	<button  class="svelte-237ry5">Generate Map
+	</button>
+
+	<button disabled class="svelte-237ry5">Save Result
+	</button>
+
+	<div><h4 class="font-bold mt-6 mb-2 my-6 leading-6">Select a Template</h4>
+	<form class="svelte-1gwcbp"><div class="samples  svelte-1gwcbp"><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-0" value="0"  class="svelte-1gwcbp">
+					<label for="sample-0" class="svelte-1gwcbp"><img src="/static/samples/example0.png" alt="/samples/example0.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-1" value="1"  class="svelte-1gwcbp">
+					<label for="sample-1" class="svelte-1gwcbp"><img src="/static/samples/example1.png" alt="/samples/example1.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-2" value="2"  class="svelte-1gwcbp">
+					<label for="sample-2" class="svelte-1gwcbp"><img src="/static/samples/example2.png" alt="/samples/example2.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-3" value="3"  class="svelte-1gwcbp">
+					<label for="sample-3" class="svelte-1gwcbp"><img src="/static/samples/example3.png" alt="/samples/example3.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-4" value="4"  class="svelte-1gwcbp">
+					<label for="sample-4" class="svelte-1gwcbp"><img src="/static/samples/example4.png" alt="/samples/example4.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-5" value="5"  class="svelte-1gwcbp">
+					<label for="sample-5" class="svelte-1gwcbp"><img src="/static/samples/example5.png" alt="/samples/example5.png" class="svelte-1gwcbp"></label>
+				</div></div></form>
+</div>
+
+	<form><h4 class="font-bold mt-6 mb-2 my-6 leading-6">Prompt</h4>
+	<input name="prompt" placeholder="Aerial view of ..., France."  style="width: 500px;" class="svelte-uoay71" value="Aerial view, France. High resolution image, 4K, ultra detailed">
+	<select name="presets"  class="svelte-uoay71"><option disabled selected value="preset">preset</option><option value="Aerial view, France. High resolution image, 4K, ultra detailed">Realistic</option>`<option value="Aerial view, France. Colorful lego bricks">Lego brick</option>`<option value="Aerial view, France. Black and white paper pencil drawing">Pencil</option>`<option value="Aerial view, France. Oil on canvas painting">Painting</option>`</select>
+
+	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Random Seed</h4>
+	<input type="Number" name="seed" placeholder="Integer Seed"  class="svelte-uoay71" value="58722304">
+	<button  class="svelte-uoay71">Random
+	</button>
+	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Sample Steps</h4>
+	<div class="flex"><input type="range" name="steps" min="10" max="30" step="1"  class="svelte-uoay71" value="20">
+		<label class="pl-2 svelte-uoay71" for="steps">20</label></div>
+</form>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="r7bv48">
+		import { start } from "/static/_app/immutable/start-a60c2789.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="r7bv48"]').parentNode,
+			paths: {"base":"/static","assets":"/static"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 2],
+				params: {},
+				routeId: ""
+			}
+		});
+	</script>
+	</body>	
+</html>

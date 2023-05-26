@@ -1,0 +1,7 @@
+flask
+diffusers
+torch
+transformers
+accelerate
+gradio
+gradio_client
