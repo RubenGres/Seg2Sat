@@ -5,7 +5,7 @@ from gradio_client import Client
 import base64
 
 
-base_gradio_url = os.getenv('URL_GRADIO')
+base_gradio_url = os.getenv('URL_GRADIO', 'http://localhost:7860')
 client = None
 
 app = Flask(__name__, static_url_path='/static')
