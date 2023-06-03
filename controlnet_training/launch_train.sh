@@ -1,6 +1,6 @@
 pip install -r requirements.txt
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchtext==0.14.1 torchaudio==0.13.1 torchdata==0.5.1 --extra-index-url https://download.pytorch.org/whl/cu117
-pip transformers accelerate xformers==0.0.16 wandb
+pip install transformers accelerate xformers==0.0.16 wandb
 pip install bitsandbytes
 huggingface-cli login --token=$HFTOKEN
 wandb login $WANDBTOKEN
