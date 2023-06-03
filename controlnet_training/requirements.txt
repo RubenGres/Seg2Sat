@@ -4,3 +4,14 @@ transformers>=4.25.1
 ftfy
 tensorboard
 datasets
+git+https://github.com/huggingface/diffusers.git
+transformers
+accelerate
+xformers==0.0.16
+wandb
+bitsandbytes
+torch==1.13.1+cu117
+torchvision==0.14.1+cu117
+torchtext==0.14.1
+torchaudio==0.13.1
+torchdata==0.5.1
