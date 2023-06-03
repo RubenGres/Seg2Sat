@@ -113,7 +113,7 @@
 	}
 
 	function clearCanvas(ctx: CanvasRenderingContext2D) {
-		ctx.fillStyle = '#000000';
+		ctx.fillStyle = '#46e483';
 		ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	}
 	function drawPixels(ctx: CanvasRenderingContext2D) {

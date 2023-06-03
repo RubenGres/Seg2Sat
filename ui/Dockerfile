@@ -1,16 +1,8 @@
-# read the doc: https://huggingface.co/docs/hub/spaces-sdks-docker
-# you will also find guides on how best to write your Dockerfile
-
 FROM python:3.9
+WORKDIR /app
 
-WORKDIR /code
-
-COPY ./requirements.txt /code/requirements.txt
-
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - &&\
-apt-get install -y nodejs
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 # Set up a new user named "user" with user ID 1000
 RUN useradd -m -u 1000 user
@@ -25,5 +17,9 @@ ENV HOME=/home/user \
 # Set the working directory to the user's home directory
 WORKDIR $HOME/app
 
-CMD ["/bin/bash"]
+ENV PORT=7860 \
+    URL_GRADIO=https://rgres-drawing2map-api.hf.space/
 
+COPY . .
+
+CMD ["python3",  "app.py"]

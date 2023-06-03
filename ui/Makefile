@@ -5,7 +5,7 @@ build-client:
 	cd frontend && npm install && npm run build && rm -rf ../static && cp -r build/ ../static/
 
 build-dev:
-	cd frontend && rm -rf node-modules && npm install && NODE_ENV=development npm run build && rm -rf ../static 2>&1 && cp -rv build/ ../static/
+	cd frontend && rm -rf node-modules && npm install && NODE_ENV=development npm run build && rm -rf ../static 2>&1 && cp -r build/ ../static/
 
 run-dev:
 	FLASK_DEBUG=development python app.py

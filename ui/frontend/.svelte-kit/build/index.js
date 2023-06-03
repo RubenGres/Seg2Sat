@@ -1,8 +1,8 @@
 
 import root from '__GENERATED__/root.svelte';
-import { respond } from '/workspaces/Drawing2Map/ui/frontend/.svelte-kit/runtime/server/index.js';
-import { set_paths, assets, base } from '/workspaces/Drawing2Map/ui/frontend/.svelte-kit/runtime/paths.js';
-import { set_prerendering } from '/workspaces/Drawing2Map/ui/frontend/.svelte-kit/runtime/env.js';
+import { respond } from '/workspaces/Drawing2Map/frontend/.svelte-kit/runtime/server/index.js';
+import { set_paths, assets, base } from '/workspaces/Drawing2Map/frontend/.svelte-kit/runtime/paths.js';
+import { set_prerendering } from '/workspaces/Drawing2Map/frontend/.svelte-kit/runtime/env.js';
 
 const template = ({ head, body, assets, nonce }) => "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"" + assets + "/favicon.png\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.contentWindow.min.js\"></script>\n\t\t" + head + "\n\t</head>\n\t<body class=\"\">\n\t\t" + body + "\n\t</body>\t\n</html>\n";
 

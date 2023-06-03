@@ -28,16 +28,17 @@ def encode_image_to_base64(filepath):
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    global client
-    if not client:
-      client = Client(base_gradio_url)
-    
     data = request.get_json()
-    
+
     base64Image = data['data'][0]
     prompt = data['data'][1]
     steps = data['data'][2]
     seed = data['data'][3]
+    
+    global client
+    if not client:
+      client = Client(base_gradio_url)
+    
 
     b64meta, b64_data = base64Image.split(',')
 
@@ -46,6 +47,7 @@ def predict():
     result = client.predict(
         image_path, prompt, steps, seed, fn_index=0
     )
+
 
     return b64meta + ',' + encode_image_to_base64(result)
 

@@ -22,12 +22,14 @@ export const COLOR_LIST: Color[] = [
 export const API = '/predict';
 
 export const IMAGES_LIST = [
+	'/samples/default.jpg',
 	'/samples/example0.png',
   '/samples/example1.png',
   '/samples/example2.png',
   '/samples/example3.png',
   '/samples/example4.png',
   '/samples/example5.png',
+  '/samples/example6.jpg',
 ];
 
 

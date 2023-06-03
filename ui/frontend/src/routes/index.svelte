@@ -12,7 +12,10 @@
 <div class="max-w-screen-md mx-auto px-3 py-5 relative z-0">
 	<article class="prose">
 		<h1>Drawing to Map</h1>
+		<p> This space is for the ControlNet model <a href="https://github.com/RubenGres/Drawing2Map" target="_blank"><span>Drawing2Map</span></a></p>
 	</article>
+
+
 	<BrushSelector />
 	<div class="drawings py-3 -mx-3">
 		<DrawingCanvas />

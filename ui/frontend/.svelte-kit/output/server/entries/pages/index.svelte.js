@@ -21,12 +21,14 @@ const COLOR_LIST = [
   { color: [107, 113, 79], label: "mixed" }
 ];
 const IMAGES_LIST = [
+  "/samples/default.jpg",
   "/samples/example0.png",
   "/samples/example1.png",
   "/samples/example2.png",
   "/samples/example3.png",
   "/samples/example4.png",
-  "/samples/example5.png"
+  "/samples/example5.png",
+  "/samples/example6.jpg"
 ];
 const PRESETS = [
   ["High resolution satellite image, 4K, ultra detailed", "Realistic"],
@@ -323,7 +325,10 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_generateMap();
   $$unsubscribe_saveResult();
   $$unsubscribe_resultImage();
-  return `<div class="${"max-w-screen-md mx-auto px-3 py-5 relative z-0"}"><article class="${"prose"}"><h1>Drawing to Map</h1></article>
+  return `<div class="${"max-w-screen-md mx-auto px-3 py-5 relative z-0"}"><article class="${"prose"}"><h1>Drawing to Map</h1>
+		<p>This space is for the ControlNet model <a href="${"https://github.com/RubenGres/Drawing2Map"}" target="${"_blank"}"><span>Drawing2Map</span></a></p></article>
+
+
 	${validate_component(BrushSelector, "BrushSelector").$$render($$result, {}, {}, {})}
 	<div class="${"drawings py-3 -mx-3 svelte-1sy339h"}">${validate_component(DrawingCanvas, "DrawingCanvas").$$render($$result, {}, {}, {})}
 		${validate_component(ResultCanvas, "ResultCanvas").$$render($$result, {}, {}, {})}</div>

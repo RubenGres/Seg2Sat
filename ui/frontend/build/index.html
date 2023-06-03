@@ -8,17 +8,20 @@
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/static/_app/immutable/assets/pages/__layout.svelte-b67cf61d.css">
 	<link rel="stylesheet" href="/static/_app/immutable/assets/pages/index.svelte-f2b33456.css">
-	<link rel="modulepreload" href="/static/_app/immutable/start-663102e3.js">
+	<link rel="modulepreload" href="/static/_app/immutable/start-1d6beeeb.js">
 	<link rel="modulepreload" href="/static/_app/immutable/chunks/index-bcf2726a.js">
 	<link rel="modulepreload" href="/static/_app/immutable/chunks/paths-d3bcbd10.js">
 	<link rel="modulepreload" href="/static/_app/immutable/pages/__layout.svelte-f5a1b718.js">
-	<link rel="modulepreload" href="/static/_app/immutable/pages/index.svelte-23c1124b.js">
+	<link rel="modulepreload" href="/static/_app/immutable/pages/index.svelte-1f940fb6.js">
 	</head>
 	<body class="">
 		
 
 
-<div class="max-w-screen-md mx-auto px-3 py-5 relative z-0"><article class="prose"><h1>Drawing to Map</h1></article>
+<div class="max-w-screen-md mx-auto px-3 py-5 relative z-0"><article class="prose"><h1>Drawing to Map</h1>
+		<p>This space is for the ControlNet model <a href="https://github.com/RubenGres/Drawing2Map" target="_blank"><span>Drawing2Map</span></a></p></article>
+
+
 	<form><h4 class="font-bold mt-6 mb-2 leading-6 my-3">Brush Type</h4>
 	<div class="colors svelte-1oy4poo" name="colors"><div class="snap-always snap-start"><input name="color"  type="radio" id="color-0" value="0" class="svelte-1oy4poo">
 				<label for="color-0" class="svelte-1oy4poo"><svg width="20" height="20" viewBox="0 0 20 20" class="svelte-1oy4poo"><rect x="0" y="0" width="20" height="20" fill="rgb(219,14,154)"></rect></svg>
@@ -91,17 +94,21 @@
 
 	<div><h4 class="font-bold mt-6 mb-2 my-6 leading-6">Select a Template</h4>
 	<form class="svelte-1gwcbp"><div class="samples  svelte-1gwcbp"><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-0" value="0"  class="svelte-1gwcbp">
-					<label for="sample-0" class="svelte-1gwcbp"><img src="/static/samples/example0.png" alt="/samples/example0.png" class="svelte-1gwcbp"></label>
+					<label for="sample-0" class="svelte-1gwcbp"><img src="/static/samples/default.jpg" alt="/samples/default.jpg" class="svelte-1gwcbp"></label>
 				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-1" value="1"  class="svelte-1gwcbp">
-					<label for="sample-1" class="svelte-1gwcbp"><img src="/static/samples/example1.png" alt="/samples/example1.png" class="svelte-1gwcbp"></label>
+					<label for="sample-1" class="svelte-1gwcbp"><img src="/static/samples/example0.png" alt="/samples/example0.png" class="svelte-1gwcbp"></label>
 				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-2" value="2"  class="svelte-1gwcbp">
-					<label for="sample-2" class="svelte-1gwcbp"><img src="/static/samples/example2.png" alt="/samples/example2.png" class="svelte-1gwcbp"></label>
+					<label for="sample-2" class="svelte-1gwcbp"><img src="/static/samples/example1.png" alt="/samples/example1.png" class="svelte-1gwcbp"></label>
 				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-3" value="3"  class="svelte-1gwcbp">
-					<label for="sample-3" class="svelte-1gwcbp"><img src="/static/samples/example3.png" alt="/samples/example3.png" class="svelte-1gwcbp"></label>
+					<label for="sample-3" class="svelte-1gwcbp"><img src="/static/samples/example2.png" alt="/samples/example2.png" class="svelte-1gwcbp"></label>
 				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-4" value="4"  class="svelte-1gwcbp">
-					<label for="sample-4" class="svelte-1gwcbp"><img src="/static/samples/example4.png" alt="/samples/example4.png" class="svelte-1gwcbp"></label>
+					<label for="sample-4" class="svelte-1gwcbp"><img src="/static/samples/example3.png" alt="/samples/example3.png" class="svelte-1gwcbp"></label>
 				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-5" value="5"  class="svelte-1gwcbp">
-					<label for="sample-5" class="svelte-1gwcbp"><img src="/static/samples/example5.png" alt="/samples/example5.png" class="svelte-1gwcbp"></label>
+					<label for="sample-5" class="svelte-1gwcbp"><img src="/static/samples/example4.png" alt="/samples/example4.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-6" value="6"  class="svelte-1gwcbp">
+					<label for="sample-6" class="svelte-1gwcbp"><img src="/static/samples/example5.png" alt="/samples/example5.png" class="svelte-1gwcbp"></label>
+				</div><div class="snap-always snap-start"><input type="radio" name="samples" id="sample-7" value="7"  class="svelte-1gwcbp">
+					<label for="sample-7" class="svelte-1gwcbp"><img src="/static/samples/example6.jpg" alt="/samples/example6.jpg" class="svelte-1gwcbp"></label>
 				</div></div></form>
 </div>
 
@@ -113,7 +120,7 @@
 	<select name="presets"  class="svelte-7to72y"><option disabled selected value="preset">preset</option><option value="High resolution satellite image, 4K, ultra detailed">Realistic</option>`<option value="Colorful lego bricks">Lego brick</option>`<option value="Black and white paper pencil drawing">Pencil</option>`<option value="Oil on canvas painting">Painting</option>`</select>
 
 	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Random Seed</h4>
-	<input type="Number" name="seed" placeholder="Integer Seed"  class="svelte-7to72y" value="382730240">
+	<input type="Number" name="seed" placeholder="Integer Seed"  class="svelte-7to72y" value="398460928">
 	<button  class="svelte-7to72y">Random
 	</button>
 	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Sample Steps</h4>
@@ -123,10 +130,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1gbrfyu">
-		import { start } from "/static/_app/immutable/start-663102e3.js";
+		<script type="module" data-sveltekit-hydrate="1meyvr0">
+		import { start } from "/static/_app/immutable/start-1d6beeeb.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1gbrfyu"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1meyvr0"]').parentNode,
 			paths: {"base":"/static","assets":"/static"},
 			session: {},
 			route: true,
