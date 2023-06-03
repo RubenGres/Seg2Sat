@@ -51,14 +51,14 @@
 		});
 	}
 
-	async function predict(base64Image: string, { prompt, steps, seed }: Params) {
+	async function predict(base64Image: string, { prompt, modifier, steps, seed }: Params) {
 		const response = await fetch('/predict', {
 			method: 'POST',
 			headers: {
 			'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-			data: [base64Image, prompt, steps, seed.toString()],
+			data: [base64Image, prompt+'. '+modifier, steps, seed.toString()],
 			}),
 		});
 

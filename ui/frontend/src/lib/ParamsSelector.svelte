@@ -7,6 +7,7 @@
 		const elements: FormElements = form.elements as FormElements;
 		$selectedParams = {
 			prompt: elements.prompt.value,
+			modifier: elements.modifier.value,
 			seed: BigInt(elements.seed.value),
 			steps: parseInt(elements.steps.value)
 		};
@@ -16,6 +17,7 @@
 	let seed: bigint = $selectedParams.seed;
 	let sampleSteps: number = $selectedParams.steps;
 	let prompt: string = $selectedParams.prompt;
+	let modifier: string = $selectedParams.modifier;
 </script>
 
 <form bind:this={form} on:input={submit}>
@@ -27,11 +29,20 @@
 		disabled={$generateMap === true}
 		style="width: 500px;"
 	/>
+
+	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Modifier</h4>
+	<input
+		bind:value={modifier}
+		name="modifier"
+		placeholder="High resolution satellite image"
+		disabled={$generateMap === true}
+		style="width: 500px;"
+	/>
 	<select
 		name="presets"
 		disabled={$generateMap === true}
 		on:change={(event) => {
-			prompt = event.currentTarget.value;
+			modifier = event.currentTarget.value;
 	  	}}>
 		<option disabled selected>preset</option>
 		{#each PRESETS as preset}
@@ -78,7 +89,7 @@
 	select,
 	button,
 	input {
-		@apply p-1 disabled:opacity-50 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+		@apply p-1 disabled:opacity-50 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-50 dark:border-gray-300 dark:focus:ring-blue-500 dark:focus:border-blue-500;
 	}
 	input:disabled + label {
 		@apply opacity-50;

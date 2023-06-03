@@ -197,7 +197,7 @@
 
 <style lang="postcss" scoped>
 	.canvas {
-		@apply max-w-full w-full z-0 border dark:border-gray-300 border-gray-500 aspect-[512/512];
+		@apply max-w-full w-full z-0 border border-gray-500 aspect-[512/512];
 	}
 	.brush {
 		@apply z-10 absolute pointer-events-none -translate-x-1/2 -translate-y-1/2;

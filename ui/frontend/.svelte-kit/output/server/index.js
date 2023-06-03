@@ -2226,7 +2226,7 @@ async function respond(request, options, state) {
 }
 function set_prerendering(value) {
 }
-const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.contentWindow.min.js"><\/script>\n		' + head + '\n	</head>\n	<body class="light:bg-white bg-[rgb(11,15,25)] light:text-black text-white">\n		' + body + "\n	</body>	\n</html>\n";
+const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.contentWindow.min.js"><\/script>\n		' + head + '\n	</head>\n	<body class="">\n		' + body + "\n	</body>	\n</html>\n";
 let read = null;
 set_paths({ "base": "/static", "assets": "" });
 let default_protocol = "https";

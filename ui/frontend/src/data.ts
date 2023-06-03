@@ -17,15 +17,8 @@ export const COLOR_LIST: Color[] = [
     { color: [255, 255, 255], label: 'snow'},
     { color: [138, 179, 160], label: 'clear cut'},
     { color: [107, 113, 79], label: 'mixed'},
-    { color: [197, 220, 66], label: 'ligneous'},
-    { color: [153, 153, 255], label: 'greenhouse'},
-    { color: [0, 0, 0], label: 'other'}
 ];
 
-//export const API = 'https://radames-text2human-api.hf.space';
-// export const API = 'http://localhost:7860';
-//export const API = 'https://hf.space/embed/CVPR/Text2Human';
-//export const API = 'https://hf.space/embed/hysts/Text2Human';
 export const API = '/predict';
 
 export const IMAGES_LIST = [
@@ -38,23 +31,9 @@ export const IMAGES_LIST = [
 ];
 
 
-export const SECTIONS = [
-    "upper clothing texture",
-	"lower clothing texture",
-    "region"
-  ];
-
-export const TEXTURES = [
-    "pure color",
-    "stripe/spline",
-    "plaid/lattice",
-    "floral",
-    "denim"
-  ];
-
 export const PRESETS = [
-  ["Aerial view, France. High resolution image, 4K, ultra detailed", "Realistic"],
-  ["Aerial view, France. Colorful lego bricks", "Lego brick"],
-  ["Aerial view, France. Black and white paper pencil drawing", "Pencil"],
-  ["Aerial view, France. Oil on canvas painting", "Painting"]
+  ["High resolution satellite image, 4K, ultra detailed", "Realistic"],
+  ["Colorful lego bricks", "Lego brick"],
+  ["Black and white paper pencil drawing", "Pencil"],
+  ["Oil on canvas painting", "Painting"]
 ];

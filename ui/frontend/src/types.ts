@@ -11,12 +11,14 @@ export interface Brush {
 
 export interface Params {
 	prompt: string;
+	modifier: string;
 	seed: bigint;
 	steps: number;
 }
 
 export interface FormElements extends HTMLCollection {
 	prompt: HTMLInputElement;
+	modifier: HTMLInputElement;
 	seed: HTMLInputElement;
 	steps: HTMLInputElement;
 }

@@ -9,7 +9,8 @@ export const currentCanvas = writable<HTMLCanvasElement>();
 export const selectedImage = writable<HTMLImageElement>();
 export const selectedBrush = writable<Brush>();
 export const selectedParams = writable<Params>({
-	prompt: PRESETS[0][0],
+	prompt: "Aerial view of rue des Lilas, Toulouse, Haute-Garonne, France",
+	modifier: PRESETS[0][0],
 	seed: randomSeed(),
 	steps: 20
 });
