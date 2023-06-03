@@ -1,16 +1,22 @@
 <script lang="ts">
-	import { PRESETS } from '../data';
-	import { selectedParams, generateMap } from '$lib/store';
-	import type { FormElements } from '../types';
-	import { randomSeed } from '$lib/utils';
+	import { PRESETS } from "../data";
+	import { selectedParams, generateMap } from "$lib/store";
+	import type { FormElements } from "../types";
+	import { randomSeed } from "$lib/utils";
 	function submit() {
 		const elements: FormElements = form.elements as FormElements;
 		$selectedParams = {
 			prompt: elements.prompt.value,
 			modifier: elements.modifier.value,
 			seed: BigInt(elements.seed.value),
-			steps: parseInt(elements.steps.value)
+			steps: parseInt(elements.steps.value),
 		};
+	}
+
+	function updateModifier(event) {
+		const selectedIndex = event.currentTarget.selectedIndex;
+		modifier = PRESETS[selectedIndex][0];
+		submit();
 	}
 
 	let form: HTMLFormElement;
@@ -41,9 +47,8 @@
 	<select
 		name="presets"
 		disabled={$generateMap === true}
-		on:change={(event) => {
-			modifier = event.currentTarget.value;
-	  	}}>
+		on:change={updateModifier}
+	>
 		<option disabled selected>preset</option>
 		{#each PRESETS as preset}
 			<option value={preset[0]}>{preset[1]}</option>`
@@ -89,7 +94,7 @@
 	select,
 	button,
 	input {
-		@apply p-1 disabled:opacity-50 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-50 dark:border-gray-300 dark:focus:ring-blue-500 dark:focus:border-blue-500;
+		@apply p-1 disabled:opacity-50 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
 	}
 	input:disabled + label {
 		@apply opacity-50;
