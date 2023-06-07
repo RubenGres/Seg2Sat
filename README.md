@@ -178,7 +178,7 @@ The following images were generated using the prompt `<style>, aerial view of 31
 
 ### Web user interface
 - The simplest way to use the model is through the hugging face space: https://huggingface.co/spaces/rgres/Drawing2Map
-- You can also run it locally: `cd ui && python start_webui.py`
+- You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
 - or with Google Colab:    <a href="https://colab.research.google.com/github/RubenGres/Drawing2Map-hfspace/blob/main/Launch_interface.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ### Diffusers library
