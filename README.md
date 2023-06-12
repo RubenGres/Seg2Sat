@@ -1,9 +1,9 @@
-Drawing-to-Map
+Segmentation-to-Satellite
 ======
 
 ## Description
 
-[Drawing2Map](https://huggingface.co/spaces/rgres/Drawing2Map) is a project that explores the potential of exploiting algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real or stylized aerial imagery.  
+Seg2Sat is a project that explores the potential of exploiting algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real or stylized aerial imagery.  
 
 Some examples of generated images:
 Image Segmentation                   |  Generated Image           |  Generated Image
@@ -177,7 +177,7 @@ The following images were generated using the prompt `<style>, aerial view of 31
 ## How to use
 
 ### Web user interface
-- The simplest way to use the model is through the hugging face space: https://huggingface.co/spaces/rgres/Drawing2Map
+- The simplest way to use the model is through the hugging face space: https://huggingface.co/spaces/rgres/Seg2Sat
 - You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
 - or with Google Colab:    <a href="https://colab.research.google.com/github/RubenGres/Drawing2Map-hfspace/blob/main/Launch_interface.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
