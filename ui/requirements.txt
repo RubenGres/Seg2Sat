@@ -1,3 +1,9 @@
 flask
 gradio_client
 Pillow
+flask
+diffusers==0.16.1
+torch
+transformers
+accelerate
+gradio

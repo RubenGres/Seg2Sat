@@ -11,10 +11,10 @@ run-dev:
 	FLASK_DEBUG=development python app.py
 
 run-prod:
-	python app.py & python gradio-app.py
+	python app.py & python gradio-backend.py
 
 run-mock:
-	python app.py & python gradio-mock-app.py
+	python app.py & python gradio-mock.py
 
 stop-server:
 	killall python
