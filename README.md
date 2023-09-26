@@ -206,7 +206,7 @@ image.show()
      
 ```
 
-<a href="https://colab.research.google.com/github/RubenGres/AerialDreams/blob/main/scripts/aerialdreams_inference.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Seg2Sat_inference_example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## Download the model
 
