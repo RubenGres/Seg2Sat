@@ -1,11 +1,10 @@
-Segmentation-to-Satellite
+Seg2Sat - Segmentation to satellite view with ControlNet
 ======
 
 ## Description
 
 Seg2Sat is a project that explores the potential of exploiting algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real or stylized aerial imagery.  
 
-Some examples of generated images:
 Image Segmentation                   |  Generated Image           |  Generated Image
 :-----------------------------------:|:--------------------------:|:-------------------------:
 ![](images/drawn_1/mask.png)       |  ![](images/drawn_1/0.png) | ![](images/drawn_1/1.png)
@@ -168,6 +167,8 @@ Image Segmentation                   |  Generated Image           |  Generated I
 
 Since this is derived from a general text-to-image model it is also possible to guide the generation further by modifying the prompt.  
 
+Prompting can be used for guiding image style, seasonality, and architechture.
+
 The following images were generated using the prompt `<style>, aerial view of 31 Rue Molière, France` :
 
   Colorful lego brick      |  Detailed pencil sketch | Oil on canvas painting
@@ -176,15 +177,19 @@ The following images were generated using the prompt `<style>, aerial view of 31
 
 ## How to use
 
-### Web user interface
-- The simplest way to use the model is through the hugging face space: https://huggingface.co/spaces/rgres/Seg2Sat
+### Drawing2Map web user interface
+
+This project also comes with a webui to generate images from drawings
+
+![Drawing2Map](https://raw.githubusercontent.com/RubenGres/Seg2Sat/main/images/webui_example.png)
+
+- The webui can be used through this HuggingFace space: https://huggingface.co/spaces/rgres/Seg2Sat
 - You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
-- or with Google Colab: <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/ui/launch_full_interface.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- or with Google Colab: <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Drawing2Map_webui.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ### Diffusers library
 
 ```python
-
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
 from diffusers import StableDiffusionControlNetPipeline
 from diffusers.utils import load_image
@@ -203,7 +208,6 @@ image = pipe(
 ).images[0]
 
 image.show()
-     
 ```
 
 <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Seg2Sat_inference_example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
@@ -229,7 +233,7 @@ This github repo consists of the following directories:
 - `dataset_preparation/`: Contains the code used to convert the FLAIR#1 dataset.
 - `scripts/`: Contains a simple example on how to use this project, with the diffuser API or a simple gradio interface.
 - `ui/`: Contains the code for the complete interface allowing you to draw from your browser
-- `images/`: All images used in the REAMDE.md file
+- `images/`: All images used in the README.md file
 
 ## Limitations
 
