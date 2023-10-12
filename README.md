@@ -1,9 +1,7 @@
 Seg2Sat - Segmentation to satellite view with ControlNet
 ======
 
-## Description
-
-Seg2Sat is a project that explores the potential of exploiting algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace ImageRy)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real or stylized aerial imagery.  
+Seg2Sat is a project that explores the potential of exploiting algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace Imagery)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real or stylized aerial imagery.  
 
 Image Segmentation                   |  Generated Image           |  Generated Image
 :-----------------------------------:|:--------------------------:|:-------------------------:
@@ -163,13 +161,9 @@ Image Segmentation                   |  Generated Image           |  Generated I
 
 <br>
 
-## Image stylization with prompt engineering
+Since this is derived from a general text-to-image model it is also possible to guide the generation further by modifying the prompt. Prompting can be used for guiding image style, seasonality, and architechture.
 
-Since this is derived from a general text-to-image model it is also possible to guide the generation further by modifying the prompt.  
-
-Prompting can be used for guiding image style, seasonality, and architechture.
-
-The following images were generated using the prompt `<style>, aerial view of 31 Rue Molière, France` :
+The following images were generated using the prompt `<style>, aerial view of 31 Rue Molière, France` and varying the syle:
 
   Colorful lego brick      |  Detailed pencil sketch | Oil on canvas painting
 :-------------------------:|:-------------------------:|:-------------------------:|
@@ -179,7 +173,7 @@ The following images were generated using the prompt `<style>, aerial view of 31
 
 ### Drawing2Map web user interface
 
-This project also comes with a webui to generate images from drawings
+This project also comes with a webui to draw in the browser and generate images on the fly
 
 ![Drawing2Map](https://raw.githubusercontent.com/RubenGres/Seg2Sat/main/images/webui_example.png)
 
