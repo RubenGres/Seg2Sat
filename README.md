@@ -225,7 +225,9 @@ The following images were generated using the prompt `<style>, aerial view of 31
 
 This project also comes with a webui to draw in the browser and generate images on the fly
 
-![Drawing2Map](https://raw.githubusercontent.com/RubenGres/Seg2Sat/main/images/webui_example.png)
+<center>
+  <img src="images/webui_example.png" alt="drawing" style="width:450px;"/>
+</center>
 
 - The webui can be used through this HuggingFace space: https://huggingface.co/spaces/rgres/Seg2Sat
 - You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
