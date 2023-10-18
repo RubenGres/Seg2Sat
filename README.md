@@ -3,7 +3,7 @@ Seg2Sat - Segmentation to aerial view using pretrained diffuser models
 
 Seg2Sat explores the potential of diffusion algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. The dataset is derived from IGN's [FLAIR (French Land cover from Aerospace Imagery)](https://ignf.github.io/FLAIR/), which provides land cover information for various regions in France. The goal is to create photorealistic synthetic aerial images or stylized aerial imagery.
 
-This could have many uses like drawing your next dungeon and dragon basemap or for dataset creation/augmentation!
+This could have many uses like drawing your next dungeon and dragon basemap or for dataset creation/augmentation. Outpainting and inpainting are also possible and yield convincing results.
 
 <table>
   <tr>
