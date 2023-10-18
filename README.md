@@ -1,13 +1,50 @@
 Seg2Sat - Segmentation to aerial view using pretrained diffuser models
 ======
 
-Seg2Sat is a project that explores the potential of exploiting algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. By leveraging IGN's [FLAIR (French Land cover from Aerospace Imagery)](https://ignf.github.io/FLAIR/) dataset, which provides land cover information for various regions in France, this project aims to create visually appealing synthetic aerial photographs that resemble real or stylized aerial imagery.  
+Seg2Sat explores the potential of diffusion algorithms such as [StableDiffusion](https://github.com/CompVis/stable-diffusion) and [ControlNet](https://github.com/lllyasviel/ControlNet) to generate aerial images based on terrain segmentation data. The dataset is derived from IGN's [FLAIR (French Land cover from Aerospace Imagery)](https://ignf.github.io/FLAIR/), which provides land cover information for various regions in France. The goal is to create photorealistic synthetic aerial images or stylized aerial imagery.
 
-Image Segmentation                   |  Generated Image           |  Generated Image
-:-----------------------------------:|:--------------------------:|:-------------------------:
-![](images/drawn_1/mask.png)       |  ![](images/drawn_1/0.png) | ![](images/drawn_1/1.png)
-![](images/067998/MSK_067998.png)  |  ![](images/067998/2.png)  | ![](images/067998/4.png)
-![](images/076201/MSK_076201.png)  |  ![](images/076201/1.png)  | ![](images/076201/2.png)
+This could have many uses like drawing your next dungeon and dragon basemap or for dataset creation/augmentation!
+
+<table>
+  <tr>
+    <th>Image Segmentation</th>
+    <th colspan="4">Generated Images</th>
+  </tr>
+  <tr>
+    <td><img src="images/drawn_1/mask.png" width="150" height="150"></td>
+    <td><img src="images/drawn_1/0.png" width="150" height="150"></td>
+    <td><img src="images/drawn_1/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td><img src="images/067998/MSK_067998.png" width="150" height="150"></td>
+    <td><img src="images/067998/2.png" width="150" height="150"></td>
+    <td><img src="images/067998/4.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td></tr>
+  <tr>
+    <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+  </tr>
+     <tr>
+    <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+    <td><img src="images/076201/1.png" width="150" height="150"></td>
+    <td><img src="images/076201/2.png" width="150" height="150"></td>
+  </tr>
+</table>
 
 <details>
    <summary>Legend from the FLAIR dataset documentation</summary>
@@ -165,9 +202,22 @@ Since this is derived from a general text-to-image model it is also possible to 
 
 The following images were generated using the prompt `<style>, aerial view of 31 Rue Molière, France` and varying the syle:
 
-  Colorful lego brick      |  Detailed pencil sketch | Oil on canvas painting
-:-------------------------:|:-------------------------:|:-------------------------:|
-![](images/styles/lego2.png)  |  ![](images/styles/pencil.png) | ![](images/styles/oil.png)
+<table>
+   <tr>
+      <th>Image Segmentation</th>
+      <th>lego brick</th>
+      <th>pencil sketch</th>
+      <th>oil on canvas</th>
+      <th>Generated Images</th>
+   </tr>
+   <tr>
+      <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
+      <td><img src="images/styles/lego2.png" width="150" height="150"></td>
+      <td><img src="images/styles/pencil.png" width="150" height="150"></td>
+      <td><img src="images/styles/oil.png" width="150" height="150"></td>
+      <td><img src="images/styles/oil.png" width="150" height="150"></td>
+   </tr>
+</table>
 
 ## How to use
 
@@ -179,7 +229,7 @@ This project also comes with a webui to draw in the browser and generate images 
 
 - The webui can be used through this HuggingFace space: https://huggingface.co/spaces/rgres/Seg2Sat
 - You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
-- or with Google Colab: <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Drawing2Map_webui.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- or with Google Colab: <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Drawing2Map_webui.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
 
 ### Diffusers library
 
@@ -204,7 +254,7 @@ image = pipe(
 image.show()
 ```
 
-<a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Seg2Sat_inference_example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Seg2Sat_inference_example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
 
 ## Download the model
 
