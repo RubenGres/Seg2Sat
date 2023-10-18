@@ -5,44 +5,49 @@ Seg2Sat explores the potential of diffusion algorithms such as [StableDiffusion]
 
 This could have many uses like dataset creation/augmentation or making maps for your next ungeon and dragon session. Outpainting and inpainting are also possible and yield convincing results.
 
+## Example photorealistic images
+
+These images are derived from the same segmentation mask in the first column and a fixed prompt: `"Aerial view of 101 avenue de l'Espinet, Toulouse, Haute-Garonne, France"`. The different image are obtained by varying the seed in the random number generator.
+
 <table>
   <tr>
     <th>Image Segmentation</th>
     <th colspan="4">Generated Images</th>
   </tr>
   <tr>
-    <td><img src="images/drawn_1/mask.png" width="150" height="150"></td>
-    <td><img src="images/drawn_1/0.png" width="150" height="150"></td>
-    <td><img src="images/drawn_1/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/0/mask.png" width="150" height="150"></td>
+    <td><img src="images/fig1/0/0.png" width="150" height="150"></td>
+    <td><img src="images/fig1/0/1.png" width="150" height="150"></td>
+    <td><img src="images/fig1/0/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/0/3.png" width="150" height="150"></td>
   </tr>
   <tr>
-    <td><img src="images/067998/MSK_067998.png" width="150" height="150"></td>
-    <td><img src="images/067998/2.png" width="150" height="150"></td>
-    <td><img src="images/067998/4.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td></tr>
-  <tr>
-    <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
-  </tr>
-     <tr>
-    <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/1/mask.png" width="150" height="150"></td>
+    <td><img src="images/fig1/1/0.png" width="150" height="150"></td>
+    <td><img src="images/fig1/1/1.png" width="150" height="150"></td>
+    <td><img src="images/fig1/1/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/1/3.png" width="150" height="150"></td>
   </tr>
   <tr>
-    <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
-    <td><img src="images/076201/1.png" width="150" height="150"></td>
-    <td><img src="images/076201/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/2/mask.png" width="150" height="150"></td>
+    <td><img src="images/fig1/2/0.png" width="150" height="150"></td>
+    <td><img src="images/fig1/2/1.png" width="150" height="150"></td>
+    <td><img src="images/fig1/2/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/2/3.png" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td><img src="images/fig1/3/mask.png" width="150" height="150"></td>
+    <td><img src="images/fig1/3/0.png" width="150" height="150"></td>
+    <td><img src="images/fig1/3/1.png" width="150" height="150"></td>
+    <td><img src="images/fig1/3/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/3/3.png" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td><img src="images/fig1/4/mask.png" width="150" height="150"></td>
+    <td><img src="images/fig1/4/0.png" width="150" height="150"></td>
+    <td><img src="images/fig1/4/1.png" width="150" height="150"></td>
+    <td><img src="images/fig1/4/2.png" width="150" height="150"></td>
+    <td><img src="images/fig1/4/3.png" width="150" height="150"></td>
   </tr>
 </table>
 
@@ -198,9 +203,11 @@ This could have many uses like dataset creation/augmentation or making maps for 
 
 <br>
 
+## Example stylized images
+
 Since this is derived from a general text-to-image model it is also possible to guide the generation further by modifying the prompt. Prompting can be used for guiding image style, seasonality, and architechture.
 
-The following images were generated using the prompt `<style>, aerial view of 31 Rue Molière, France` and varying the syle:
+The following images were generated using the prompt `"<style>, aerial view of 31 Rue Molière, Franceé` and varying the syle parameter. The examples were cherry picked with varying seed:
 
 <table>
    <tr>
@@ -208,14 +215,14 @@ The following images were generated using the prompt `<style>, aerial view of 31
       <th>lego brick</th>
       <th>pencil sketch</th>
       <th>oil on canvas</th>
-      <th>Generated Images</th>
+      <th>stained glass</th>
    </tr>
    <tr>
-      <td><img src="images/076201/MSK_076201.png" width="150" height="150"></td>
-      <td><img src="images/styles/lego2.png" width="150" height="150"></td>
-      <td><img src="images/styles/pencil.png" width="150" height="150"></td>
-      <td><img src="images/styles/oil.png" width="150" height="150"></td>
-      <td><img src="images/styles/oil.png" width="150" height="150"></td>
+      <td><img src="images/fig2/mask.png" width="150" height="150"></td>
+      <td><img src="images/fig2/lego.png" width="150" height="150"></td>
+      <td><img src="images/fig2/pencil.png" width="150" height="150"></td>
+      <td><img src="images/fig2/oiloncanvas.png" width="150" height="150"></td>
+      <td><img src="images/fig2/stainedglass.png" width="150" height="150"></td>
    </tr>
 </table>
 
