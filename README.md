@@ -15,39 +15,39 @@ These images are derived from the same segmentation mask in the first column and
     <th colspan="4">Generated Images</th>
   </tr>
   <tr>
-    <td><img src="images/fig1/0/mask.png" width="150" height="150"></td>
-    <td><img src="images/fig1/0/0.png" width="150" height="150"></td>
-    <td><img src="images/fig1/0/1.png" width="150" height="150"></td>
-    <td><img src="images/fig1/0/2.png" width="150" height="150"></td>
-    <td><img src="images/fig1/0/3.png" width="150" height="150"></td>
+    <td><img src="images/fig1/0/mask.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/0/0.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/0/1.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/0/2.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/0/3.png" max-width="150" max-height="150"></td>
   </tr>
   <tr>
-    <td><img src="images/fig1/1/mask.png" width="150" height="150"></td>
-    <td><img src="images/fig1/1/0.png" width="150" height="150"></td>
-    <td><img src="images/fig1/1/1.png" width="150" height="150"></td>
-    <td><img src="images/fig1/1/2.png" width="150" height="150"></td>
-    <td><img src="images/fig1/1/3.png" width="150" height="150"></td>
+    <td><img src="images/fig1/1/mask.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/1/0.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/1/1.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/1/2.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/1/3.png" max-width="150" max-height="150"></td>
   </tr>
   <tr>
-    <td><img src="images/fig1/2/mask.png" width="150" height="150"></td>
-    <td><img src="images/fig1/2/0.png" width="150" height="150"></td>
-    <td><img src="images/fig1/2/1.png" width="150" height="150"></td>
-    <td><img src="images/fig1/2/2.png" width="150" height="150"></td>
-    <td><img src="images/fig1/2/3.png" width="150" height="150"></td>
+    <td><img src="images/fig1/2/mask.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/2/0.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/2/1.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/2/2.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/2/3.png" max-width="150" max-height="150"></td>
   </tr>
   <tr>
-    <td><img src="images/fig1/3/mask.png" width="150" height="150"></td>
-    <td><img src="images/fig1/3/0.png" width="150" height="150"></td>
-    <td><img src="images/fig1/3/1.png" width="150" height="150"></td>
-    <td><img src="images/fig1/3/2.png" width="150" height="150"></td>
-    <td><img src="images/fig1/3/3.png" width="150" height="150"></td>
+    <td><img src="images/fig1/3/mask.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/3/0.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/3/1.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/3/2.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/3/3.png" max-width="150" max-height="150"></td>
   </tr>
   <tr>
-    <td><img src="images/fig1/4/mask.png" width="150" height="150"></td>
-    <td><img src="images/fig1/4/0.png" width="150" height="150"></td>
-    <td><img src="images/fig1/4/1.png" width="150" height="150"></td>
-    <td><img src="images/fig1/4/2.png" width="150" height="150"></td>
-    <td><img src="images/fig1/4/3.png" width="150" height="150"></td>
+    <td><img src="images/fig1/4/mask.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/4/0.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/4/1.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/4/2.png" max-width="150" max-height="150"></td>
+    <td><img src="images/fig1/4/3.png" max-width="150" max-height="150"></td>
   </tr>
 </table>
 
@@ -218,11 +218,11 @@ The following images were generated using the prompt `"<style>, aerial view of 3
       <th>stained glass</th>
    </tr>
    <tr>
-      <td><img src="images/fig2/mask.png" width="150" height="150"></td>
-      <td><img src="images/fig2/lego.png" width="150" height="150"></td>
-      <td><img src="images/fig2/pencil.png" width="150" height="150"></td>
-      <td><img src="images/fig2/oiloncanvas.png" width="150" height="150"></td>
-      <td><img src="images/fig2/stainedglass.png" width="150" height="150"></td>
+      <td><img src="images/fig2/mask.png" max-width="150" max-height="150"></td>
+      <td><img src="images/fig2/lego.png" max-width="150" max-height="150"></td>
+      <td><img src="images/fig2/pencil.png" max-width="150" max-height="150"></td>
+      <td><img src="images/fig2/oiloncanvas.png" max-width="150" max-height="150"></td>
+      <td><img src="images/fig2/stainedglass.png" max-width="150" max-height="150"></td>
    </tr>
 </table>
 
