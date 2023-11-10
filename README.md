@@ -244,7 +244,6 @@ This project also comes with a webui to draw in the browser and generate images 
 
 ```python
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
-from diffusers import StableDiffusionControlNetPipeline
 from diffusers.utils import load_image
 import torch
 
