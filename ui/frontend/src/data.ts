@@ -19,7 +19,7 @@ export const COLOR_LIST: Color[] = [
     { color: [107, 113, 79], label: 'mixed'},
 ];
 
-export const API = '/predict';
+export const API = 'https://zqz606ggn85ysase.us-east-1.aws.endpoints.huggingface.cloud';
 
 export const IMAGES_LIST = [
 	'/samples/default.jpg',

@@ -12,7 +12,9 @@
 <div class="max-w-screen-md mx-auto px-3 py-5 relative z-0">
 	<article class="prose">
 		<h1>Drawing to Map</h1>
-		<p> This space is for the ControlNet model <a href="https://github.com/RubenGres/Drawing2Map" target="_blank"><span>Drawing2Map</span></a></p>
+		<p> This space is for the ControlNet model <a href="https://github.com/RubenGres/Seg2Sat" target="_blank"><span>Seg2Sat</span></a></p>
+
+		<p> If you don't get your result in a few seconds after query, wait 2minutes and come back. GPU time is expensive and the model is not always running</p>
 	</article>
 
 

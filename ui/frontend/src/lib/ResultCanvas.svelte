@@ -12,9 +12,12 @@
 		saveResult
 	} from '$lib/store';
 
+	let predictStatus: string = '';
+
 	$: (async () => {
 		if ($generateMap) {
-			const results = await predict($currentCanvas.toDataURL(), $selectedParams);
+			predictStatus = "Generating..."
+			const results = await predict($currentCanvas.toDataURL().split(',')[1], $selectedParams);
 			$resultImage = results;
 			$generateMap = false;
 		}
@@ -27,7 +30,6 @@
 		}
 	})();
 
-	let predictStatus: string = '';
 	async function saveImage(base64Image: string) {
 		return new Promise((resolve, reject) => {
 			try {
@@ -52,30 +54,41 @@
 	}
 
 	async function predict(base64Image: string, { prompt, modifier, steps, seed }: Params) {
-		const response = await fetch('/predict', {
+		const apiUrl = API; // Hugging Face API URL
+	
+		const stepsString = typeof steps === 'bigint' ? steps.toString() : steps;
+		const seedString = typeof seed === 'bigint' ? seed.toString() : seed;
+	
+		const payload = {
+			inputs: prompt + '. ' + modifier,
+			prompt: prompt + '. ' + modifier,
+			image: base64Image,
+			steps: stepsString,
+			seed: seedString
+		};
+
+		const response = await fetch(apiUrl, {
 			method: 'POST',
 			headers: {
-			'Content-Type': 'application/json',
+				'Content-Type': 'application/json',
+				'Accept': 'image/png' // Assuming the API returns an image
 			},
-			body: JSON.stringify({
-			data: [base64Image, prompt+'. '+modifier, steps, seed.toString()],
-			}),
+			body: JSON.stringify(payload),
 		});
+	
+		console.log(response);
 
-		if (!response.ok) {
-			throw new Error('Prediction request failed.');
-		}
-
-		const result = await response.text();
-		return result;
+		const blob = await response.blob();
+    	return URL.createObjectURL(blob);
 	}
+	
 </script>
 
 <div class="relative overflow-clip flex flex-col justify-center items-center w-full h-full">
 	{#if $resultImage}
 		<img
 			class="image {$generateMap ? 'opacity-30' : ''}"
-			alt="Generative Map Result"
+			alt="Endpoint is starting, try again in a few minutes"
 			src={$resultImage}
 			width="512"
 			height="512"

@@ -8,18 +8,20 @@
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/static/_app/immutable/assets/pages/__layout.svelte-b67cf61d.css">
 	<link rel="stylesheet" href="/static/_app/immutable/assets/pages/index.svelte-f2b33456.css">
-	<link rel="modulepreload" href="/static/_app/immutable/start-83af0c6f.js">
+	<link rel="modulepreload" href="/static/_app/immutable/start-f751e6ba.js">
 	<link rel="modulepreload" href="/static/_app/immutable/chunks/index-bcf2726a.js">
 	<link rel="modulepreload" href="/static/_app/immutable/chunks/paths-d3bcbd10.js">
 	<link rel="modulepreload" href="/static/_app/immutable/pages/__layout.svelte-f5a1b718.js">
-	<link rel="modulepreload" href="/static/_app/immutable/pages/index.svelte-ce916c65.js">
+	<link rel="modulepreload" href="/static/_app/immutable/pages/index.svelte-0dcb92d2.js">
 	</head>
 	<body class="">
 		
 
 
 <div class="max-w-screen-md mx-auto px-3 py-5 relative z-0"><article class="prose"><h1>Drawing to Map</h1>
-		<p>This space is for the ControlNet model <a href="https://github.com/RubenGres/Drawing2Map" target="_blank"><span>Drawing2Map</span></a></p></article>
+		<p>This space is for the ControlNet model <a href="https://github.com/RubenGres/Seg2Sat" target="_blank"><span>Seg2Sat</span></a></p>
+
+		<p>If you don&#39;t get your result in a few seconds after query, wait 2minutes and come back. GPU time is expensive</p></article>
 
 
 	<form><h4 class="font-bold mt-6 mb-2 leading-6 my-3">Brush Type</h4>
@@ -116,11 +118,11 @@
 	<input name="prompt" placeholder="Aerial view of ..., France."  style="width: 500px;" class="svelte-7to72y" value="Aerial view of rue des Lilas, Toulouse, Haute-Garonne, France">
 
 	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Modifier</h4>
-	<input name="modifier" placeholder="High resolution satellite image"  style="width: 500px;" class="svelte-7to72y" value="">
-	<select name="presets"  class="svelte-7to72y"><option disabled selected value="preset">preset</option><option value="">None</option>`<option value="Watercolors">Watercolors</option>`<option value="Colorful lego bricks">Lego brick</option>`<option value="Black and white paper pencil drawing">Pencil</option>`<option value="Oil on canvas painting">Painting</option>`</select>
+	<input name="modifier" placeholder="High resolution satellite image"  style="width: 500px;" class="svelte-7to72y" value="High resolution satellite image, 4K, ultra detailed">
+	<select name="presets"  class="svelte-7to72y"><option disabled selected value="preset">preset</option><option value="High resolution satellite image, 4K, ultra detailed">Realistic</option>`<option value="Colorful lego bricks">Lego brick</option>`<option value="Black and white paper pencil drawing">Pencil</option>`<option value="Oil on canvas painting">Painting</option>`</select>
 
 	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Random Seed</h4>
-	<input type="Number" name="seed" placeholder="Integer Seed"  class="svelte-7to72y" value="861011968">
+	<input type="Number" name="seed" placeholder="Integer Seed"  class="svelte-7to72y" value="847382528">
 	<button  class="svelte-7to72y">Random
 	</button>
 	<h4 class="font-bold mt-6 mb-2 my-6 leading-6">Sample Steps</h4>
@@ -130,10 +132,10 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="u6sx22">
-		import { start } from "/static/_app/immutable/start-83af0c6f.js";
+		<script type="module" data-sveltekit-hydrate="1deh0ud">
+		import { start } from "/static/_app/immutable/start-f751e6ba.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="u6sx22"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1deh0ud"]').parentNode,
 			paths: {"base":"/static","assets":"/static"},
 			session: {},
 			route: true,

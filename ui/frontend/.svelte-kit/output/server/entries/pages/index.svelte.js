@@ -20,6 +20,7 @@ const COLOR_LIST = [
   { color: [138, 179, 160], label: "clear cut" },
   { color: [107, 113, 79], label: "mixed" }
 ];
+const API = "https://zqz606ggn85ysase.us-east-1.aws.endpoints.huggingface.cloud";
 const IMAGES_LIST = [
   "/samples/default.jpg",
   "/samples/example0.png",
@@ -232,7 +233,6 @@ const css$1 = {
   code: ".image.svelte-1t0h0rs{z-index:0;box-sizing:border-box;aspect-ratio:512/512;border-width:1px;--tw-border-opacity:1;border-color:rgb(107 114 128 / var(--tw-border-opacity))\n}@media(prefers-color-scheme: dark){.image.svelte-1t0h0rs{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity))\n    }}.loading.svelte-1t0h0rs{position:absolute;top:0px;left:0px;right:0px;bottom:0px;display:flex;flex-direction:column;align-items:center;justify-content:center\n}",
   map: null
 };
-let predictStatus = "";
 async function saveImage(base64Image) {
   return new Promise((resolve, reject) => {
     try {
@@ -255,20 +255,6 @@ async function saveImage(base64Image) {
     }
   });
 }
-async function predict(base64Image, { prompt, modifier, steps, seed }) {
-  const response = await fetch("/predict", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      data: [base64Image, prompt + ". " + modifier, steps, seed.toString()]
-    })
-  });
-  if (!response.ok) {
-    throw new Error("Prediction request failed.");
-  }
-  const result = await response.text();
-  return result;
-}
 const ResultCanvas = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $saveResult, $$unsubscribe_saveResult;
   let $resultImage, $$unsubscribe_resultImage;
@@ -280,11 +266,36 @@ const ResultCanvas = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_generateMap = subscribe(generateMap, (value) => $generateMap = value);
   $$unsubscribe_selectedParams = subscribe(selectedParams, (value) => $selectedParams = value);
   $$unsubscribe_currentCanvas = subscribe(currentCanvas, (value) => $currentCanvas = value);
+  let predictStatus = "";
+  async function predict(base64Image, { prompt, modifier, steps, seed }) {
+    const apiUrl = API;
+    const stepsString = typeof steps === "bigint" ? steps.toString() : steps;
+    const seedString = typeof seed === "bigint" ? seed.toString() : seed;
+    const payload = {
+      inputs: prompt + ". " + modifier,
+      prompt: prompt + ". " + modifier,
+      image: base64Image,
+      steps: stepsString,
+      seed: seedString
+    };
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "image/png"
+      },
+      body: JSON.stringify(payload)
+    });
+    console.log(response);
+    const blob = await response.blob();
+    return URL.createObjectURL(blob);
+  }
   $$result.css.add(css$1);
   {
     (async () => {
       if ($generateMap) {
-        const results = await predict($currentCanvas.toDataURL(), $selectedParams);
+        predictStatus = "Generating...";
+        const results = await predict($currentCanvas.toDataURL().split(",")[1], $selectedParams);
         set_store_value(resultImage, $resultImage = results, $resultImage);
         set_store_value(generateMap, $generateMap = false, $generateMap);
       }
@@ -326,7 +337,9 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_saveResult();
   $$unsubscribe_resultImage();
   return `<div class="${"max-w-screen-md mx-auto px-3 py-5 relative z-0"}"><article class="${"prose"}"><h1>Drawing to Map</h1>
-		<p>This space is for the ControlNet model <a href="${"https://github.com/RubenGres/Drawing2Map"}" target="${"_blank"}"><span>Drawing2Map</span></a></p></article>
+		<p>This space is for the ControlNet model <a href="${"https://github.com/RubenGres/Seg2Sat"}" target="${"_blank"}"><span>Seg2Sat</span></a></p>
+
+		<p>If you don&#39;t get your result in a few seconds after query, wait 2minutes and come back. GPU time is expensive</p></article>
 
 
 	${validate_component(BrushSelector, "BrushSelector").$$render($$result, {}, {}, {})}
