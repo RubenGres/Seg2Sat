@@ -284,6 +284,7 @@ This github repo consists of the following directories:
 - `controlnet_training/`: Contains everything needed to train the ControlNet model with validation images.
 - `dataset_preparation/`: Contains the code used to convert the FLAIR#1 dataset.
 - `scripts/`: Contains a simple example on how to use this project, with the diffuser API or a simple gradio interface.
+- `endpoint/`: Code for the hugging face endpoint
 - `ui/`: Contains the code for the complete interface allowing you to draw from your browser
 - `images/`: All images used in the README.md file
 
