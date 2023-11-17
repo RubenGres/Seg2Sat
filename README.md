@@ -207,7 +207,7 @@ These images are derived from the same segmentation mask in the first column and
 
 Since this is derived from a general text-to-image model it is also possible to guide the generation further by modifying the prompt. Prompting can be used for guiding image style, seasonality, and architechture.
 
-The following images were generated using the prompt `"<style>, aerial view of 31 Rue Molière, Franceé` and varying the syle parameter. The examples were cherry picked with varying seed:
+The following images were generated using the prompt `"<style>, aerial view of 31 Rue Molière, France` and varying the syle parameter. The examples were cherry picked with varying seed:
 
 <table>
    <tr>
@@ -236,7 +236,7 @@ This project also comes with a webui to draw in the browser and generate images 
   <img src="images/webui_example.png" alt="drawing" style="width:450px;"/>
 </center>
 
-- The webui can be used through this HuggingFace space: https://huggingface.co/spaces/rgres/Seg2Sat
+- The webui can be used through this webui: https://rubengr.es/Seg2Sat
 - You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
 - or with Google Colab: <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Drawing2Map_webui.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
 
@@ -266,7 +266,7 @@ image.show()
 
 ## Download the model
 
-The trained weights are available on HuggingFace [here](https://huggingface.co/rgres/sd-controlnet-aerialdreams)
+The trained weights for the ControlNet model are available on HuggingFace [here](https://huggingface.co/rgres/Seg2Sat-sd-controlnet)
 
 ## About the dataset
 
@@ -287,7 +287,8 @@ This github repo consists of the following directories:
 - `endpoint/`: Code for the hugging face endpoint
 - `ui/`: Contains the code for the complete interface allowing you to draw from your browser
 - `images/`: All images used in the README.md file
-
+- `examples/`: Examples scripts for using this model with the diffusers library
+  
 ## Limitations
 
 One limitation of this project is that the FLAIR dataset covers France only. As a result, the learned representation and generated images may be biased towards French terrain. The model might struggle to accurately render other types of terrain outside of France. Future improvements could involve expanding the dataset to include a more diverse range of regions and landscapes.  
