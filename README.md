@@ -275,7 +275,7 @@ To facilitate the use of StableDiffusion, a custom dataset has been derived from
 Each label is in the form `Aerial view of <OSM display_name>. <classes>`  
 *e.g. Aerial view of Pays de la Loire, France métropolitaine, 49260, France. brushwood, deciduous, herbaceous vegetation*
 
-The complete dataset, consisting of over 61,000 images, can be accessed on HuggingFace [here](https://huggingface.co/datasets/rgres/AerialDreams).
+The complete dataset, consisting of over 61,000 images, can be accessed on HuggingFace [here](https://huggingface.co/datasets/IGNF/FLAIR_1_osm_clip).
 
 ## File Structure
 
