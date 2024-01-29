@@ -247,7 +247,7 @@ from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
 from diffusers.utils import load_image
 import torch
 
-controlnet = ControlNetModel.from_pretrained("rgres/sd-controlnet-aerialdreams", torch_dtype=torch.float16)
+controlnet = ControlNetModel.from_pretrained("rgres/Seg2Sat-sd-controlnet", torch_dtype=torch.float16)
 
 pipe = StableDiffusionControlNetPipeline.from_pretrained(
     "stabilityai/stable-diffusion-2-1-base", controlnet=controlnet, torch_dtype=torch.float16
