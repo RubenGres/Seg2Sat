@@ -243,20 +243,25 @@ This project also comes with a webui to draw in the browser and generate images 
 ### Diffusers library
 
 ```python
-from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
+from diffusers import StableDiffusionControlNetPipeline, StableDiffusionControlNetInpaintPipeline, ControlNetModel, UniPCMultistepScheduler
 from diffusers.utils import load_image
+from PIL import Image
 import torch
 
-controlnet = ControlNetModel.from_pretrained("rgres/Seg2Sat-sd-controlnet", torch_dtype=torch.float16)
+dtype = torch.bfloat16 if torch.cuda.get_device_capability()[0] == 8 else torch.float16
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+controlnet = ControlNetModel.from_pretrained("rgres/Seg2Sat-sd-controlnet", torch_dtype=dtype)
 
 pipe = StableDiffusionControlNetPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-2-1-base", controlnet=controlnet, torch_dtype=torch.float16
-)
+    "stabilityai/stable-diffusion-2-1-base", controlnet=controlnet, torch_dtype=dtype, safety_checker=None
+).to("cuda")
 
-image = load_image("https://raw.githubusercontent.com/RubenGres/AerialDreams/main/validation/mask/MSK_076201.png")
+segmentation = Image.open("segmentation.png")
 
 image = pipe(
-   prompt="High resolution image, 4K, ultra detailed, aerial view of 31 Rue Molière, France.", num_inference_steps=20, image=image
+   prompt="Aerial view of 31 Rue Molière, Paris, France.",
+   num_inference_steps=20, image=image
 ).images[0]
 
 image.show()
