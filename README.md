@@ -236,7 +236,7 @@ This project also comes with a webui to draw in the browser and generate images 
   <img src="images/webui_example.png" alt="drawing" style="width:450px;"/>
 </center>
 
-- The webui can be used through this webui: https://rubengr.es/Seg2Sat
+- The webui can be used through this link: https://rubengr.es/Seg2Sat
 - You can also run it locally: `cd ui && pip install -r requirements.txt && python start_webui.py`
 - or with Google Colab: <a href="https://colab.research.google.com/github/RubenGres/Seg2Sat/blob/main/Drawing2Map_webui.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
 
