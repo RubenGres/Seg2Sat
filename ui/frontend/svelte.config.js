@@ -6,15 +6,13 @@ const dev = process.env.NODE_ENV === 'development';
 console.log('dev', dev);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
 	preprocess: preprocess({
 		postcss: true
 	}),
 
 	kit: {
 		paths: {
-			base: '/static'
+			base: dev ? '' : '/Seg2Sat'  // Empty in dev, /Seg2Sat in production
 		},
 		adapter: adapter({
 			pages: 'build',
